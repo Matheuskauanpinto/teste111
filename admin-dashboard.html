@@ -1,0 +1,37 @@
+<!-- Esta página é acessada após o login bem-sucedido do administrador -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin-dashboard.css">
+    <title>Painel do Administrador</title>
+</head>
+<body>
+    <header>
+        <h1>Painel do Administrador</h1>
+    </header>
+    <main>
+        <h2>Adicionar Novo Vídeo</h2>
+        <form action="upload-video.php" method="POST" enctype="multipart/form-data">
+            <label for="video">Selecione um vídeo:</label>
+            <input type="file" id="video" name="video" accept="video/*" required>
+            <br>
+            <label for="category">Categoria:</label>
+            <select id="category" name="category" required>
+                <option value="acao">Ação</option>
+                <option value="aventura">Aventura</option>
+                <!-- Adicione mais opções de categoria aqui -->
+            </select>
+            <br>
+            <label for="name">Nome do Vídeo:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="description">Descrição:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+            <br>
+            <button type="submit">Adicionar Vídeo</button>
+        </form>
+    </main>
+</body>
+</html>

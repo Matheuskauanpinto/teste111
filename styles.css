@@ -1,5 +1,5 @@
 /* Reset de estilos para remover estilos padrão do navegador */
-body, h1, h2, ul, li, a {
+body, h1, h2, ul, li, a, p, input, button, img {
     margin: 0;
     padding: 0;
 }
@@ -8,7 +8,6 @@ body, h1, h2, ul, li, a {
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    line-height: 1.6;
     color: #333;
     margin: 0;
     padding: 0;
@@ -16,41 +15,46 @@ body {
 
 /* Estilo para o cabeçalho */
 header {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header .logo {
-    display: inline-block;
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.header h1 {
     font-size: 24px;
-    font-weight: bold;
-    margin-left: 20px;
-    color: #ff0000;
 }
 
-header .menu {
-    float: right;
-    margin-right: 20px;
+.header .search-bar input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
 }
 
-header .menu ul {
-    list-style: none;
+.header .search-bar button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-header .menu ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-header .menu ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-/* Estilo para a área de vídeos */
+/* Estilo para o conteúdo principal */
 main {
     max-width: 1200px;
     margin: 20px auto;
@@ -59,33 +63,37 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-main .video-grid {
+/* Estilo para a lista de vídeos */
+.video-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
 
-.main .video {
+.video {
     border: 1px solid #ddd;
     padding: 10px;
-    background-color: #fff;
 }
 
-.main .video img {
-    width: 100%;
-    max-height: 150px;
-    object-fit: cover;
+.video img {
+    max-width: 100%;
+    height: auto;
 }
 
-.main .video h3 {
+.video h2 {
     font-size: 18px;
-    margin-top: 10px;
+    margin: 10px 0;
+}
+
+.video p {
+    font-size: 14px;
+    color: #888;
 }
 
 /* Estilo para o rodapé */
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #fff;
-    color: #333;
+    background-color: #333;
+    color: #fff;
 }

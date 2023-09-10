@@ -16,33 +16,41 @@ body {
 
 /* Estilo para o cabeçalho */
 header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
 }
 
-header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+header .logo {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+    color: #ff0000;
 }
 
-nav ul {
+header .menu {
+    float: right;
+    margin-right: 20px;
+}
+
+header .menu ul {
     list-style: none;
 }
 
-nav li {
+header .menu ul li {
     display: inline;
     margin-right: 20px;
 }
 
-nav a {
+header .menu ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #333;
     font-weight: bold;
+    font-size: 16px;
 }
 
-/* Estilo para o conteúdo principal */
+/* Estilo para a área de vídeos */
 main {
     max-width: 1200px;
     margin: 20px auto;
@@ -51,29 +59,33 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-section {
-    margin-bottom: 20px;
+main .video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-section h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.main .video {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.main .video img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.main .video h3 {
+    font-size: 18px;
+    margin-top: 10px;
 }
 
 /* Estilo para o rodapé */
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #333;
-    color: #fff;
-}
-
-/* Estilo para links */
-a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+    background-color: #fff;
+    color: #333;
 }
